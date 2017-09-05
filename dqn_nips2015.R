@@ -185,7 +185,7 @@ for(i in 1:20000){
     while(episode_done==0){
       
       if(step >1){
-        
+      da<-diag(state_size)
       qn1<-nn.ff2(qn1,t(next_state))
       action_index<-which.max(qn1$post[[length(size)]])
       current_state<-next_state
