@@ -300,15 +300,7 @@ todata<-sapply(1:100,reverse_coord)
                output = output, W = W, vW = vW, B = B, vB = vB)
     
     
-    
-    gradient_buffer<-qn1
-    for(i in 2:length(size)){
-      gradient_buffer$W[[i-1]]<-matrix(rep(0, size[i] * size[i - 1]), 
-                                       c(size[i], size[i - 1]))
-      gradient_buffer$B[[i-1]]<-rep(0, size[i])    
-    }
-    target_qn<-qn1
-    
+   
     
   }
   
