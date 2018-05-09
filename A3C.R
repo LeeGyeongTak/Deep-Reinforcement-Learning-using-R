@@ -460,7 +460,6 @@ todata<-sapply(1:100,reverse_coord)
         step_list<-c(step_list,step)
         final_action_list[[i]]<-action_list
         reward_list<-c(reward_list,total_r)
-        memory[[step]]<-list(input=(store_current_state),next_state=cov_next_state,action=next_action,error=err,reward=re_ep[1])
         cat("\n final coordinate")
         print(coord(next_state))
         ts.plot(reward_list,main=paste0((reward_list)[length(reward_list)],"-",step,"-",min(step_list)))
